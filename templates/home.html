@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1 >This is just heading</h1>
+
+</head>
+<body>
+    {% for switch in switches %}
+<div>
+    <h1>Current status of SWITCH-{{ loop.index }} is : {{ switch.state }} </h1>
+    <a>do you want to turn :</a>
+    <a href="/{{ loop.index }}/{{ switch.other_state }}">{{ switch.other_state }}</a>
+</div>
+<br/>
+<br/>
+    {% endfor %}
+    
+</body>
+</html>
